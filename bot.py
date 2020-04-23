@@ -11,13 +11,13 @@ chrome_options.add_argument = ('--headless')
 chrome_options.add_argument = ('--disable-dev-shm-usage')
 chrome_options.add_argument = ('--no-sandbox')
 browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options) 
-
+print('estou configurado')
 # dados do leilao e login
 
 id_leilao = 39571
 login = 'LA 22K'
 senha = '21466635'
-
+print('tenho os dados')
 # login
 
 browser = webdriver.Chrome('/home/ggpedro/selenium/chromedriver')
@@ -30,10 +30,11 @@ select.click()
 select.send_keys(senha)
 select.send_keys(Keys.ENTER)
 time.sleep(2)
-
+print('fiz login')
 # pagina do leilao
 
 browser.get(f'https://www.lance24h.com.br/Detalhes.php?Codigo={id_leilao}')
+print('estou rodando')
 
 while browser.find_element_by_id(f'L_BotaoA_{id_leilao}') != 'Arrematado':
     dez_s = browser.find_element_by_id(f'L_ContDown_1_{id_leilao}').text
