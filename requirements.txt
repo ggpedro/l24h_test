@@ -1,7 +1,0 @@
-beautifulsoup4 (4.9.0)
-ipython (7.6.1)
-lxml (4.4.1)
-pandas (1.0.3)
-pip (9.0.1)
-requests (2.22.0)
-selenium (3.141.0)
