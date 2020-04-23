@@ -41,11 +41,11 @@ while browser.find_element_by_id(f'L_BotaoA_{id_leilao}') != 'Arrematado':
     seg = int(dez_s + uni_s)
 
     if seg == 1:
-        time.sleep(0.8)
+        time.sleep(0.6)
         if seg == 1:
             botao = browser.find_element_by_id(f'L_BotaoA_{id_leilao}')
             botao.click()
-            time.sleep(1.4)
+            time.sleep(2)
             
         else:
             pass
