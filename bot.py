@@ -41,12 +41,12 @@ while browser.find_element_by_id(f'L_BotaoA_{id_leilao}').text == 'Lance':
     uni_s = browser.find_element_by_id(f'L_ContDown_2_{id_leilao}').text
     seg = int(dez_s + uni_s)
 
-    if seg == 5:
+    if seg == 7:
         time.sleep(0.6)
-        if seg == 5:
+        if seg == 7:
             botao = browser.find_element_by_id(f'L_BotaoA_{id_leilao}')
             botao.click()
-            time.sleep(2)
+            time.sleep(3)
             
         else:
             pass
