@@ -14,7 +14,7 @@ browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), 
 print('estou configurado')
 # dados do leilao e login
 
-id_leilao = 39571
+id_leilao = 39569
 login = 'LA 22K'
 senha = '21466635'
 print('tenho os dados')
@@ -36,7 +36,7 @@ print('fiz login')
 browser.get(f'https://www.lance24h.com.br/Detalhes.php?Codigo={id_leilao}')
 print('estou rodando')
 
-while browser.find_element_by_id(f'L_BotaoA_{id_leilao}') != 'Arrematado':
+while browser.find_element_by_id(f'L_BotaoA_{id_leilao}').text = 'Lance':
     dez_s = browser.find_element_by_id(f'L_ContDown_1_{id_leilao}').text
     uni_s = browser.find_element_by_id(f'L_ContDown_2_{id_leilao}').text
     seg = int(dez_s + uni_s)
