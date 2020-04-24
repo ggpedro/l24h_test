@@ -36,14 +36,14 @@ print('fiz login')
 browser.get(f'https://www.lance24h.com.br/Detalhes.php?Codigo={id_leilao}')
 print('estou rodando')
 
-while browser.find_element_by_id(f'L_BotaoA_{id_leilao}').text = 'Lance':
+while browser.find_element_by_id(f'L_BotaoA_{id_leilao}').text == 'Lance':
     dez_s = browser.find_element_by_id(f'L_ContDown_1_{id_leilao}').text
     uni_s = browser.find_element_by_id(f'L_ContDown_2_{id_leilao}').text
     seg = int(dez_s + uni_s)
 
-    if seg == 1:
+    if seg == 5:
         time.sleep(0.6)
-        if seg == 1:
+        if seg == 5:
             botao = browser.find_element_by_id(f'L_BotaoA_{id_leilao}')
             botao.click()
             time.sleep(2)
